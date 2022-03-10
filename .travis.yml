@@ -13,8 +13,8 @@ script:
 
 after_success:
     - docker build -t constwon111/docker-frontend ./frontend
-    - docker billd -t constwon111/docker-backend ./backend
-    - docker billd -t constwon111/docker-nginx ./nginx
+    - docker build -t constwon111/docker-backend ./backend
+    - docker build -t constwon111/docker-nginx ./nginx
 
     - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
